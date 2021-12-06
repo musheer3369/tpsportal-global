@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="774190f01f1310005a3637b8ec8b70ef" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>u_action_code</field>
+        <global>true</global>
+        <isolate_script>false</isolate_script>
+        <messages/>
+        <name>AutopopulateKnowledgeBase</name>
+        <order/>
+        <script><![CDATA[function onLoad() {
+	try{
+	var ga = new GlideAjax("MSTClientUtilsAjax");
+	ga.addParam("sysparm_name", "getKBFromAssignmentGroup");
+	ga.addParam("sysparm_assignment_group_id", g_form.getValue("assignment_group"));
+	ga.addParam("sysparm_view", gel("sysparm_view").value);
+	ga.getXML(setKbValue);
+	}
+	catch(e)
+		{
+			console.log('Err:gel is not defined' );
+		}
+	
+	// Below is the old code prior to STRY0082559
+	//Get the view name
+// 	var view_name = gel("sysparm_view").value;
+	
+// 	var gr = new GlideRecord('kb_knowledge_base');
+	
+// 	if( view_name == 'Solutions') {
+// 		gr.addQuery("title", 'TSSC Solutions');
+// 		gr.query(setKb);
+// 	} else if (view_name == "Serial_EID") {
+// 		gr.addQuery("title", 'TSSC Knowledge');
+// 		gr.query(setKb);
+// 	} else { //else //if (view_name == "" || view_name == "Default View") {
+// 		gr.addQuery("title", 'Knowledge');
+// 		gr.query(setKb);
+// 	}
+	
+}
+
+function setKbValue(response) {
+	var answer = response.responseXML.documentElement.getAttribute("answer");
+	console.log("KBID ANSWER: " + answer);
+	g_form.setValue("u_kb_knowledge_base", answer); 
+}
+
+// function setKb(kbGr) {
+// 	if (kbGr.next())
+// 		g_form.setValue('u_kb_knowledge_base', kbGr.sys_id);
+// }
+
+// function getUrlParameter(name){
+// 	var url = document.URL.parseQuery();
+// 	if (url[name]) {
+// 		return decodeURI(url[name]);
+// 	} else {
+// 		return;
+// 	}
+// }]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>Raju.Bhistappa@mindshift.com</sys_created_by>
+        <sys_created_on>2018-01-22 16:03:33</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_domain>774190f01f1310005a3637b8ec8b70ef</sys_domain>
+        <sys_domain_path>!!!/</sys_domain_path>
+        <sys_id>da1eaf31dbf347005524fbec0f9619c0</sys_id>
+        <sys_mod_count>40</sys_mod_count>
+        <sys_name>AutopopulateKnowledgeBase</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Global" source="global">global</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Tidel Service Portal -  Global">a94219c5db10091091a5560868961952</sys_scope>
+        <sys_update_name>sys_script_client_da1eaf31dbf347005524fbec0f9619c0</sys_update_name>
+        <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
+        <sys_updated_on>2021-12-06 18:18:56</sys_updated_on>
+        <table>incident</table>
+        <type>onLoad</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Tidel Service Portal -  Global">a94219c5db10091091a5560868961952</claim_owner_scope>
+        <claim_timestamp>17d90f861010000001</claim_timestamp>
+        <metadata_update_name>sys_script_client_da1eaf31dbf347005524fbec0f9619c0</metadata_update_name>
+        <previous_claim_app_version>1.0.0</previous_claim_app_version>
+        <previous_claim_name>Tidel Service Portal -  Global</previous_claim_name>
+        <previous_claim_scope>a94219c5db10091091a5560868961952</previous_claim_scope>
+        <sys_created_by>Mohammad.Ahmed@mindshift.com</sys_created_by>
+        <sys_created_on>2021-12-06 18:18:56</sys_created_on>
+        <sys_id>2b264681db98091091a556086896195a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
+        <sys_updated_on>2021-12-06 18:18:56</sys_updated_on>
+    </sys_claim>
+</record_update>
