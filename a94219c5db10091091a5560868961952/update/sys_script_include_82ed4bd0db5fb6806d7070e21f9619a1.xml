@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>global.MSTSPEntryPage</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>used for proper redirection  to portal </description>
+        <name>MSTSPEntryPage</name>
+        <script><![CDATA[var MSTSPEntryPage = Class.create();
+
+MSTSPEntryPage.prototype = {
+	
+	initialize: function() {
+		this.logVariables = false;  // for debugging 
+		this.portal = "/ms/";      // The URL suffix specified in the sp_portal record
+	},
+
+	/***
+	 *
+	 * Referred to by property: glide.entry.page.script
+	 * 
+	 **/
+	getLoginURL: function() {
+		// When requesting a page directly (eg: /problem_list.do)
+		// The platform session_timeout.do sets the login page to welcome.do
+		// Since we are handling the login, clear that value
+		var session = gs.getSession();
+		var nt = session.getProperty("nav_to");
+		var sPage = session.getProperty("starting_page");
+		if (nt == "welcome.do")
+			session.clearProperty("nav_to");
+		
+		if (!sPage && !nt)
+			session.putProperty("starting_page", gs.getProperty("glide.login.home"));
+		
+		// Send the user to the portal's login page
+		var portalGR = new GlideRecord("sp_portal");
+		portalGR.addQuery("url_suffix", this.portal.replace(/\//g, ""));
+		portalGR.addNotNullQuery("login_page");
+		portalGR.query();
+		if (portalGR.next())
+			return this.portal + "?id=" + portalGR.login_page.id;
+
+		// Send to the a default login page
+		return this.portal + "?id=login";
+	},
+	
+	/***
+	 *
+	 * Referred to by property: glide.entry.first.page.script
+	 * 
+	 **/
+	getFirstPageURL: function() {
+		
+		var session = gs.getSession();
+		this.logProperties('before', session);
+        var myroles = session.getRoles();
+		// has roles and is not a Service Portal page - go to UI16
+		var nt = session.getProperty("nav_to");	
+		var isServicePortalURL = new GlideSPScriptable().isServicePortalURL(nt);
+		var redirectURL = session.getProperty("login_redirect");
+		
+		try
+			{
+				if(this.isMSTPortalUser(myroles)){	
+					
+						                
+					var sPage = session.getProperty("starting_page");					
+						
+					gs.info("DEBUG PortalUser:  starting page:" + sPage 
+							+ " nt :" + nt + " redirectURL:" + redirectURL);
+                    var thisurl='';
+					var startPos=0;
+					if (sPage){		nt = sPage;}
+					 if(nt !=null && nt.indexOf("incident.do") != -1)
+						{	
+							 nt = decodeURIComponent(nt);
+		                    // gs.info("DEBUG decoded URI:" + nt);
+							 startPos = nt.indexOf("sys_id=");
+							//7 for length of sys_id. startPos + 7
+							//32 is length of sys_id
+							var incidentid = nt.substr(startPos + 7 ,32);							
+							return this.portal + "?table=incident&sys_id=" + incidentid + "&id=form";
+						}
+					else if(nt != null && nt.indexOf("assessment_take2.do") != -1)
+						{
+							nt= decodeURIComponent(nt);		
+							thisurl = this.portal + "?id=my_surveys";							
+							return thisurl;
+						}
+					else if(nt != null && nt.indexOf("sc_request.do") != -1)
+						{
+							nt= decodeURIComponent(nt);		
+							
+							startPos = nt.indexOf("sys_id=");
+							//7 for length of sys_id. startPos + 7
+							//32 is length of sys_id
+							var requestid = nt.substr(startPos + 7 ,32);							
+							thisurl= this.portal + "?table=sc_request&sys_id=" + requestid + "&id=form";
+					
+							return thisurl;
+							
+						}					
+					else 
+						{
+							if(gs.hasRole('x_mst_tsp.poc_tsp') )
+							{
+								this.portal = '/tsp/';
+							}
+							return this.portal;
+						}
+				 }	
+			}
+		catch(err)
+			{
+				gs.error("MST Error: Error occured finding the roles or redirecting properly " + err.message );
+			}
+		
+		return;
+			
+		
+		
+	},
+	isMSTPortalUser: function(roles)	{
+		  var roleArray = roles.split(',');
+		// if no roles/poc. make this ess user
+		    var retVal = false;			
+						if(roleArray.length == 1 && roleArray[0] == '')
+						{							
+							retVal = true;							
+						}
+				      else if (!gs.getUser().hasRole("admin") && (gs.getUser().hasRole("poc") || gs.getUser().hasRole("ms_am") ))
+					    {			
+							
+							retVal=true;							
+						}
+					
+		
+		
+		return retVal;
+	},
+	
+	type: 'MSTSPEntryPage'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>Mohammad.Ahmed@mindshift.com</sys_created_by>
+        <sys_created_on>2017-06-08 05:05:49</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>82ed4bd0db5fb6806d7070e21f9619a1</sys_id>
+        <sys_mod_count>29</sys_mod_count>
+        <sys_name>MSTSPEntryPage</sys_name>
+        <sys_package display_value="Global" source="global">global</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Tidel Service Portal -  Global">a94219c5db10091091a5560868961952</sys_scope>
+        <sys_update_name>sys_script_include_82ed4bd0db5fb6806d7070e21f9619a1</sys_update_name>
+        <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
+        <sys_updated_on>2021-12-06 14:34:23</sys_updated_on>
+    </sys_script_include>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Tidel Service Portal -  Global">a94219c5db10091091a5560868961952</claim_owner_scope>
+        <claim_timestamp>17d902acacc0000001</claim_timestamp>
+        <metadata_update_name>sys_script_include_82ed4bd0db5fb6806d7070e21f9619a1</metadata_update_name>
+        <previous_claim_app_version>1.0.0</previous_claim_app_version>
+        <previous_claim_name>Tidel Service Portal -  Global</previous_claim_name>
+        <previous_claim_scope>a94219c5db10091091a5560868961952</previous_claim_scope>
+        <sys_created_by>Mohammad.Ahmed@mindshift.com</sys_created_by>
+        <sys_created_on>2021-12-06 14:34:23</sys_created_on>
+        <sys_id>c2c21d49db10091091a55608689619cd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
+        <sys_updated_on>2021-12-06 14:34:23</sys_updated_on>
+    </sys_claim>
+</record_update>
