@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="8eba0beedb423200ddad70e21f9619df" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>false</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>core_company</collection>
+        <condition>current.sys_domain.changes()</condition>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Domain - Cascade Company-Ricoh</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[setDomains();
+
+function setDomains() {
+   //make current transaction uncancelable while this rule runs,
+   //set variable to previous cancelable state to restore when done
+   var isCancelable = gs.setCannotCancel(true);
+	
+  
+   setNewDomain('incident');
+   //setNewDomain('cmn_department');
+   //setNewDomain('cmn_location');
+
+   //restore previous cancelable state
+   gs.setCannotCancel(isCancelable);
+}
+
+function setNewDomain(table) {
+   var domainID = current.sys_domain.toString();
+   var rec = new GlideRecord(table);
+   rec.addQuery('company', current.sys_id);
+   if (rec.isValidField("managed_domain"))
+      rec.addQuery("managed_domain", false);
+   rec.query();
+   while (rec.next()) {
+      rec.sys_domain = domainID;
+      rec.update();
+   }
+}]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>Mohammad.Ahmed@mindshift.com</sys_created_by>
+        <sys_created_on>2021-12-08 02:00:17</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>8eba0beedb423200ddad70e21f9619df</sys_domain>
+        <sys_domain_path>!!!/!!!/!!!/!!!/!!!/</sys_domain_path>
+        <sys_id>d359b02ddb9cc910c05f2706ca96191a</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Domain - Cascade Company-Ricoh</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Global" source="global">global</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Tidel Service Portal -  Global">a94219c5db10091091a5560868961952</sys_scope>
+        <sys_update_name>sys_script_d359b02ddb9cc910c05f2706ca96191a</sys_update_name>
+        <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
+        <sys_updated_on>2021-12-08 13:20:15</sys_updated_on>
+        <template/>
+        <when>after</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=d359b02ddb9cc910c05f2706ca96191a"/>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Tidel Service Portal -  Global">a94219c5db10091091a5560868961952</claim_owner_scope>
+        <claim_timestamp>17d9a33a2fc0000001</claim_timestamp>
+        <metadata_update_name>sys_script_d359b02ddb9cc910c05f2706ca96191a</metadata_update_name>
+        <previous_claim_app_version>1.0.0</previous_claim_app_version>
+        <previous_claim_name>Tidel Service Portal -  Global</previous_claim_name>
+        <previous_claim_scope>a94219c5db10091091a5560868961952</previous_claim_scope>
+        <sys_created_by>Mohammad.Ahmed@mindshift.com</sys_created_by>
+        <sys_created_on>2021-12-08 13:20:15</sys_created_on>
+        <sys_id>6bf4db25db5c815091a55608689619e4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
+        <sys_updated_on>2021-12-08 13:20:15</sys_updated_on>
+    </sys_claim>
+</record_update>
