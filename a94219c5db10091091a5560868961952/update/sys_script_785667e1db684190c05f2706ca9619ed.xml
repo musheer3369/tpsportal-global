@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>public</access>
+        <action_delete>false</action_delete>
+        <action_insert>false</action_insert>
+        <action_query>false</action_query>
+        <action_update>false</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>global</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>incident functions-Tidel Portal</name>
+        <order>120</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[// populate the default value for the caller
+function incidentGetViewName() {
+	
+  if (gs.hasRole("itil") || gs.hasRole("sn_incident_read")) 
+     return; 
+  if (view.startsWith("ess"))
+     return;
+  if (view == "sys_ref_list")
+     return;
+	if(gs.hasRole('x_mst_tsp.poc_tsp'))
+	{
+		answer ='tsp';
+		return;
+	}
+	
+  answer = "ess";
+}
+
+function incident_listGetViewName() {
+  incidentGetViewName();
+}
+
+// for ESS type users, use the logged in user
+// for itil users, if the parent had a user, use that person
+function incidentGetCaller() {
+	if (gs.hasRole("itil")) {
+		var action = gs.action;
+		var table = action.get("sysparm_collection");
+		if (table != "sys_user")
+			return null;
+
+		var userID = action.get("sysparm_collectionID");
+		return userID;
+	}
+
+	return gs.getUserID();
+}
+
+// get an email address from the sys_user file
+function sys_userGetEmailAddress(sys_id) {
+	// danger, at this point, the current record switches to sys_user
+	var prev = current;
+	var emailAddress = null;
+	var user = new GlideRecord("sys_user");
+	user.addQuery("sys_id", sys_id);
+	user.query();
+	if (user.next()) {
+                                if (user.notification == 2) 
+		   emailAddress = user.email;
+	}
+
+	current = prev;
+	return emailAddress;
+}
+]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>Mohammad.Ahmed@mindshift.com</sys_created_by>
+        <sys_created_on>2021-12-21 00:51:39</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>785667e1db684190c05f2706ca9619ed</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>incident functions-Tidel Portal</sys_name>
+        <sys_overrides display_value="incident functions">68c334efc0a80164016c1bce9b634660</sys_overrides>
+        <sys_package display_value="Global" source="global">global</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Tidel Service Portal -  Global">a94219c5db10091091a5560868961952</sys_scope>
+        <sys_update_name>sys_script_785667e1db684190c05f2706ca9619ed</sys_update_name>
+        <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
+        <sys_updated_on>2021-12-21 01:22:11</sys_updated_on>
+        <template/>
+        <when>before</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=785667e1db684190c05f2706ca9619ed"/>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Tidel Service Portal -  Global">a94219c5db10091091a5560868961952</claim_owner_scope>
+        <claim_timestamp>17dda9101eb0000001</claim_timestamp>
+        <metadata_update_name>sys_script_785667e1db684190c05f2706ca9619ed</metadata_update_name>
+        <previous_claim_app_version>1.0.0</previous_claim_app_version>
+        <previous_claim_name>Tidel Service Portal -  Global</previous_claim_name>
+        <previous_claim_scope>a94219c5db10091091a5560868961952</previous_claim_scope>
+        <sys_created_by>Mohammad.Ahmed@mindshift.com</sys_created_by>
+        <sys_created_on>2021-12-21 01:17:56</sys_created_on>
+        <sys_id>e55ce7a5dbe84190c05f2706ca961969</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
+        <sys_updated_on>2021-12-21 01:17:56</sys_updated_on>
+    </sys_claim>
+</record_update>
