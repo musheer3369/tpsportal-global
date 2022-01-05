@@ -95,7 +95,7 @@ function sys_userGetEmailAddress(sys_id) {
         <sys_package display_value="Global" source="global">global</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="Tidel Service Portal -  Global">a94219c5db10091091a5560868961952</sys_scope>
+        <sys_scope display_value="Ricoh Service Advantage Portal -  Global">a94219c5db10091091a5560868961952</sys_scope>
         <sys_update_name>sys_script_785667e1db684190c05f2706ca9619ed</sys_update_name>
         <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
         <sys_updated_on>2021-12-21 01:22:11</sys_updated_on>
@@ -104,7 +104,7 @@ function sys_userGetEmailAddress(sys_id) {
     </sys_script>
     <sys_translated_text action="delete_multiple" query="documentkey=785667e1db684190c05f2706ca9619ed"/>
     <sys_claim action="INSERT_OR_UPDATE">
-        <claim_owner_scope display_value="Tidel Service Portal -  Global">a94219c5db10091091a5560868961952</claim_owner_scope>
+        <claim_owner_scope display_value="Ricoh Service Advantage Portal -  Global">a94219c5db10091091a5560868961952</claim_owner_scope>
         <claim_timestamp>17dda9101eb0000001</claim_timestamp>
         <metadata_update_name>sys_script_785667e1db684190c05f2706ca9619ed</metadata_update_name>
         <previous_claim_app_version>1.0.0</previous_claim_app_version>

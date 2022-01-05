@@ -34,7 +34,8 @@ function setDomains() {
    //set variable to previous cancelable state to restore when done
    var isCancelable = gs.setCannotCancel(true);
 	
-   setNewDomain('incident');
+   setNewDomain('incident');	
+	setNewDomain('u_part');
   // setNewDomain('sys_user_group');
   // setNewDomain('cmn_department');
  //  setNewDomain('cmn_location');
@@ -62,16 +63,16 @@ function setNewDomain(table) {
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>ea09737fdb5cc510c05f2706ca96194e</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>Domain - Cascade Company-Ricoh</sys_name>
         <sys_overrides/>
-        <sys_package display_value="Tidel Service Portal -  Global" source="a94219c5db10091091a5560868961952">a94219c5db10091091a5560868961952</sys_package>
+        <sys_package display_value="Ricoh Service Advantage Portal -  Global" source="a94219c5db10091091a5560868961952">a94219c5db10091091a5560868961952</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="Tidel Service Portal -  Global">a94219c5db10091091a5560868961952</sys_scope>
+        <sys_scope display_value="Ricoh Service Advantage Portal -  Global">a94219c5db10091091a5560868961952</sys_scope>
         <sys_update_name>sys_script_ea09737fdb5cc510c05f2706ca96194e</sys_update_name>
         <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
-        <sys_updated_on>2021-12-15 15:44:39</sys_updated_on>
+        <sys_updated_on>2021-12-21 14:09:45</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>

@@ -86,7 +86,7 @@ function setKbValue(response) {
     </sys_script_client>
     <sys_update_version action="INSERT_OR_UPDATE">
         <action>DELETE</action>
-        <application display_value="Tidel Service Portal -  Global">a94219c5db10091091a5560868961952</application>
+        <application display_value="Ricoh Service Advantage Portal -  Global">a94219c5db10091091a5560868961952</application>
         <file_path/>
         <instance_id>d22192526f90e244869e7b2f5d3ee476</instance_id>
         <instance_name>ricohusadev</instance_name>
@@ -171,11 +171,11 @@ function setKbValue(response) {
         <sys_metadata>8a748e4ddb58091091a5560868961958</sys_metadata>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>AutopopulateKnowledgeBase</sys_name>
-        <sys_package display_value="Tidel Service Portal -  Global" source="a94219c5db10091091a5560868961952">a94219c5db10091091a5560868961952</sys_package>
+        <sys_package display_value="Ricoh Service Advantage Portal -  Global" source="a94219c5db10091091a5560868961952">a94219c5db10091091a5560868961952</sys_package>
         <sys_parent display_value="Incident">038faef0db2132004efafbec0f961923</sys_parent>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="Tidel Service Portal -  Global">a94219c5db10091091a5560868961952</sys_scope>
+        <sys_scope display_value="Ricoh Service Advantage Portal -  Global">a94219c5db10091091a5560868961952</sys_scope>
         <sys_scope_delete display_value="">38ce1a1362b24dbea4b1a222dee62029</sys_scope_delete>
         <sys_update_name>sys_script_client_8a748e4ddb58091091a5560868961958</sys_update_name>
         <sys_update_version display_value="sys_script_client_8a748e4ddb58091091a5560868961958">8a74468ddb58091091a55608689619e6</sys_update_version>
