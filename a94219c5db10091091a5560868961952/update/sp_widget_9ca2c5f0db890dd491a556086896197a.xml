@@ -145,12 +145,12 @@
 	data.filterACLs = true;
 	data.show_new = true;
 	data.show_keywords  = true;
-	data.show_breadcrumbs = false;
+	data.show_breadcrumbs = true;
 	data.fromUrl = true;
 	data.useInstanceTitle = (options.use_instance_title == "true");
 	data.headerTitle = data.useInstanceTitle ? options.title : gr.getPlural();
 	data.enable_filter = input.enable_filter || options.enable_filter == true || options.enable_filter == "true";
-	data.dataTableWidget = $sp.getWidget('widget-data-table', data);
+	data.dataTableWidget = $sp.getWidget('rsa-widget-data-table', data);
 	
 
 	function copyParameters(to, names) {
@@ -172,7 +172,7 @@
         <sys_created_on>2022-01-12 01:32:24</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>9ca2c5f0db890dd491a556086896197a</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>RSA Data Table from URL Definition</sys_name>
         <sys_package display_value="Ricoh Service Advantage Portal -  Global" source="a94219c5db10091091a5560868961952">a94219c5db10091091a5560868961952</sys_package>
         <sys_policy/>
@@ -180,7 +180,7 @@
         <sys_scope display_value="Ricoh Service Advantage Portal -  Global">a94219c5db10091091a5560868961952</sys_scope>
         <sys_update_name>sp_widget_9ca2c5f0db890dd491a556086896197a</sys_update_name>
         <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
-        <sys_updated_on>2022-01-12 01:33:13</sys_updated_on>
+        <sys_updated_on>2022-01-24 23:38:54</sys_updated_on>
         <template><![CDATA[<div>
   <div ng-if="data.invalid_table">
     <div class="alert alert-info">
