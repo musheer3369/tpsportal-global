@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sp_rel_widget_clone">
     <sp_rel_widget_clone action="INSERT_OR_UPDATE">
-        <child display_value="RSA Data Table from URL Definition">9ca2c5f0db890dd491a556086896197a</child>
-        <cloned>2022-01-12 00:58:34</cloned>
-        <last_validated>2022-01-12 00:58:34</last_validated>
+        <child display_value="RSA Data Table from URL Definition">10425dc6db11415091a5560868961940</child>
+        <cloned>2022-01-28 10:08:46</cloned>
+        <last_validated>2022-01-28 10:08:46</last_validated>
         <parent display_value="Data Table from URL Definition">8ae61f55cb21020000f8d856634c9c93</parent>
         <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;sp_widget&gt;&lt;category&gt;standard&lt;/category&gt;&lt;client_script&gt;&lt;![CDATA[function($scope, $rootScope, $location, spUtil, $timeout, spAriaFocusManager) {
 	var canNavigate = true;
@@ -170,17 +170,17 @@
 &lt;/div&gt;]]&gt;&lt;/template&gt;&lt;/sp_widget&gt;</payload>
         <sys_class_name>sp_rel_widget_clone</sys_class_name>
         <sys_created_by>Mohammad.Ahmed@mindshift.com</sys_created_by>
-        <sys_created_on>2022-01-12 01:32:24</sys_created_on>
+        <sys_created_on>2022-01-28 10:08:46</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>94a209f0db890dd491a5560868961978</sys_id>
+        <sys_id>90425dc6db11415091a5560868961945</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>9ca2c5f0db890dd491a556086896197a</sys_name>
+        <sys_name>10425dc6db11415091a5560868961940</sys_name>
         <sys_package display_value="Ricoh Service Advantage Portal -  Global" source="a94219c5db10091091a5560868961952">a94219c5db10091091a5560868961952</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Ricoh Service Advantage Portal -  Global">a94219c5db10091091a5560868961952</sys_scope>
-        <sys_update_name>sp_rel_widget_clone_94a209f0db890dd491a5560868961978</sys_update_name>
+        <sys_update_name>sp_rel_widget_clone_90425dc6db11415091a5560868961945</sys_update_name>
         <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
-        <sys_updated_on>2022-01-12 01:32:24</sys_updated_on>
+        <sys_updated_on>2022-01-28 10:08:46</sys_updated_on>
     </sp_rel_widget_clone>
 </record_update>

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_page">
+    <sp_page action="DELETE">
+        <category>sp_platform</category>
+        <css>// each column has a flex-item classs&#13;
+.flex-item {&#13;
+  width: 50%;&#13;
+  position: relative;&#13;
+}&#13;
+&#13;
+.v5001b062d7101200b0b044580e6103eb &gt; .panel , .flex-item .vfd1f4ec347730200ba13a5554ee490c0 &gt; .panel-shift &gt; .panel {&#13;
+  position: absolute;&#13;
+  top: 0;&#13;
+  bottom: 0;&#13;
+  right: 0;&#13;
+  left: 0;&#13;
+  margin: 0;&#13;
+  overflow: hidden;&#13;
+  border-radius: 0;&#13;
+  display: flex;&#13;
+  flex-direction: column;&#13;
+  height: 100%;&#13;
+&#13;
+  &gt; .panel-body {&#13;
+    overflow: scroll;&#13;
+    -webkit-overflow-scrolling: touch;&#13;
+    flex-grow: 1;&#13;
+  }&#13;
+&#13;
+  &gt; .panel-heading, .panel-footer {&#13;
+    flex-shrink: 0;&#13;
+  }&#13;
+&#13;
+  &gt; .panel-heading {&#13;
+    height: 52px;&#13;
+  }&#13;
+}&#13;
+&#13;
+footer {&#13;
+	position: static;&#13;
+}</css>
+        <draft>false</draft>
+        <dynamic_title_structure/>
+        <id>rsa_lf</id>
+        <internal>true</internal>
+        <omit_watcher>false</omit_watcher>
+        <public>false</public>
+        <roles>snc_external,snc_internal</roles>
+        <seo_script/>
+        <short_description>Full screen list and form</short_description>
+        <sys_class_name>sp_page</sys_class_name>
+        <sys_created_by>Mohammad.Ahmed@mindshift.com</sys_created_by>
+        <sys_created_on>2022-01-12 01:28:33</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>ffb14dfcdb490dd491a5560868961950</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>rsa_lf</sys_name>
+        <sys_package display_value="Ricoh Service Advantage Portal -  Global" source="a94219c5db10091091a5560868961952">a94219c5db10091091a5560868961952</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Ricoh Service Advantage Portal -  Global">a94219c5db10091091a5560868961952</sys_scope>
+        <sys_update_name>sp_page_ffb14dfcdb490dd491a5560868961950</sys_update_name>
+        <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
+        <sys_updated_on>2022-01-12 01:28:48</sys_updated_on>
+        <title>RSA  List &amp; Form</title>
+        <use_seo_script>false</use_seo_script>
+    </sp_page>
+    <sys_translated_text action="DELETE" query="documentkey=ffb14dfcdb490dd491a5560868961950"/>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Ricoh Service Advantage Portal -  Global">a94219c5db10091091a5560868961952</application>
+        <file_path/>
+        <instance_id>d22192526f90e244869e7b2f5d3ee476</instance_id>
+        <instance_name>ricohusadev</instance_name>
+        <name>sp_page_ffb14dfcdb490dd491a5560868961950</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_page">
+    <sp_page action="INSERT_OR_UPDATE">
+        <category>sp_platform</category>
+        <css>// each column has a flex-item classs&#13;
+.flex-item {&#13;
+  width: 50%;&#13;
+  position: relative;&#13;
+}&#13;
+&#13;
+.v5001b062d7101200b0b044580e6103eb &gt; .panel , .flex-item .vfd1f4ec347730200ba13a5554ee490c0 &gt; .panel-shift &gt; .panel {&#13;
+  position: absolute;&#13;
+  top: 0;&#13;
+  bottom: 0;&#13;
+  right: 0;&#13;
+  left: 0;&#13;
+  margin: 0;&#13;
+  overflow: hidden;&#13;
+  border-radius: 0;&#13;
+  display: flex;&#13;
+  flex-direction: column;&#13;
+  height: 100%;&#13;
+&#13;
+  &gt; .panel-body {&#13;
+    overflow: scroll;&#13;
+    -webkit-overflow-scrolling: touch;&#13;
+    flex-grow: 1;&#13;
+  }&#13;
+&#13;
+  &gt; .panel-heading, .panel-footer {&#13;
+    flex-shrink: 0;&#13;
+  }&#13;
+&#13;
+  &gt; .panel-heading {&#13;
+    height: 52px;&#13;
+  }&#13;
+}&#13;
+&#13;
+footer {&#13;
+	position: static;&#13;
+}</css>
+        <draft>false</draft>
+        <dynamic_title_structure/>
+        <id>rsa_lf</id>
+        <internal>true</internal>
+        <omit_watcher>false</omit_watcher>
+        <public>false</public>
+        <roles>snc_external,snc_internal</roles>
+        <seo_script/>
+        <short_description>Full screen list and form</short_description>
+        <sys_class_name>sp_page</sys_class_name>
+        <sys_created_by>Mohammad.Ahmed@mindshift.com</sys_created_by>
+        <sys_created_on>2022-01-12 01:28:33</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>ffb14dfcdb490dd491a5560868961950</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>rsa_lf</sys_name>
+        <sys_package display_value="Ricoh Service Advantage Portal -  Global" source="a94219c5db10091091a5560868961952">a94219c5db10091091a5560868961952</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Ricoh Service Advantage Portal -  Global">a94219c5db10091091a5560868961952</sys_scope>
+        <sys_update_name>sp_page_ffb14dfcdb490dd491a5560868961950</sys_update_name>
+        <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
+        <sys_updated_on>2022-01-12 01:28:48</sys_updated_on>
+        <title>RSA  List &amp; Form</title>
+        <use_seo_script>false</use_seo_script>
+    </sp_page>
+    <sys_translated_text action="delete_multiple" query="documentkey=ffb14dfcdb490dd491a5560868961950"/>
+</record_update>]]></payload>
+        <payload_hash>2033295543</payload_hash>
+        <record_name>rsa_lf</record_name>
+        <reverted_from/>
+        <source>4fe60745db11411091a55608689619d2</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>Mohammad.Ahmed@mindshift.com</sys_created_by>
+        <sys_created_on>2022-01-25 16:04:36</sys_created_on>
+        <sys_id>1be6c745db11411091a5560868961957</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17e91fb5c3b0000001</sys_recorded_at>
+        <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
+        <sys_updated_on>2022-01-25 16:04:36</sys_updated_on>
+        <type>Page</type>
+        <update_guid>d7e6c7456311411084a42fcea3623257</update_guid>
+        <update_guid_history>d7e6c7456311411084a42fcea3623257:2033295543</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Record deleted 2022-01-28 04:55:13">e52fc9c2db9d015091a5560868961976</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>Mohammad.Ahmed@mindshift.com</sys_created_by>
+        <sys_created_on>2022-01-28 09:55:13</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_db_object display_value="" name="sp_page">sp_page</sys_db_object>
+        <sys_id>a9943c27e2794e4e96011463514dda44</sys_id>
+        <sys_metadata>ffb14dfcdb490dd491a5560868961950</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>rsa_lf</sys_name>
+        <sys_package display_value="Ricoh Service Advantage Portal -  Global" source="a94219c5db10091091a5560868961952">a94219c5db10091091a5560868961952</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Ricoh Service Advantage Portal -  Global">a94219c5db10091091a5560868961952</sys_scope>
+        <sys_scope_delete display_value="">38ce1a1362b24dbea4b1a222dee62029</sys_scope_delete>
+        <sys_update_name>sp_page_ffb14dfcdb490dd491a5560868961950</sys_update_name>
+        <sys_update_version display_value="sp_page_ffb14dfcdb490dd491a5560868961950">1be6c745db11411091a5560868961957</sys_update_version>
+        <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 09:55:13</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

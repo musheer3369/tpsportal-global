@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="8eba0beedb423200ddad70e21f9619df" table="sys_script_client">
+    <sys_script_client action="DELETE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>u_action_code</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>AutopopulateKnowledgeBase</name>
+        <order/>
+        <script><![CDATA[function onLoad() {
+	try{
+	var ga = new GlideAjax("MSTClientUtilsAjax");
+	ga.addParam("sysparm_name", "getKBFromAssignmentGroup");
+	ga.addParam("sysparm_assignment_group_id", g_form.getValue("assignment_group"));
+	ga.addParam("sysparm_view", gel("sysparm_view").value);
+	ga.getXML(setKbValue);
+	}
+	catch(e)
+		{
+			console.log('Err:gel is not defined' );
+		}
+	
+	// Below is the old code prior to STRY0082559
+	//Get the view name
+// 	var view_name = gel("sysparm_view").value;
+	
+// 	var gr = new GlideRecord('kb_knowledge_base');
+	
+// 	if( view_name == 'Solutions') {
+// 		gr.addQuery("title", 'TSSC Solutions');
+// 		gr.query(setKb);
+// 	} else if (view_name == "Serial_EID") {
+// 		gr.addQuery("title", 'TSSC Knowledge');
+// 		gr.query(setKb);
+// 	} else { //else //if (view_name == "" || view_name == "Default View") {
+// 		gr.addQuery("title", 'Knowledge');
+// 		gr.query(setKb);
+// 	}
+	
+}
+
+function setKbValue(response) {
+	var answer = response.responseXML.documentElement.getAttribute("answer");
+	console.log("KBID ANSWER: " + answer);
+	g_form.setValue("u_kb_knowledge_base", answer); 
+}
+
+// function setKb(kbGr) {
+// 	if (kbGr.next())
+// 		g_form.setValue('u_kb_knowledge_base', kbGr.sys_id);
+// }
+
+// function getUrlParameter(name){
+// 	var url = document.URL.parseQuery();
+// 	if (url[name]) {
+// 		return decodeURI(url[name]);
+// 	} else {
+// 		return;
+// 	}
+// }]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>Mohammad.Ahmed@mindshift.com</sys_created_by>
+        <sys_created_on>2022-01-31 13:08:50</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_domain>8eba0beedb423200ddad70e21f9619df</sys_domain>
+        <sys_domain_path>!!!/</sys_domain_path>
+        <sys_id>0b38d14bdb95011091a556086896198a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>AutopopulateKnowledgeBase</sys_name>
+        <sys_overrides display_value="">da1eaf31dbf347005524fbec0f9619c0</sys_overrides>
+        <sys_package display_value="Ricoh Service Advantage Portal -  Global" source="a94219c5db10091091a5560868961952">a94219c5db10091091a5560868961952</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Ricoh Service Advantage Portal -  Global">a94219c5db10091091a5560868961952</sys_scope>
+        <sys_update_name>sys_script_client_0b38d14bdb95011091a556086896198a</sys_update_name>
+        <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
+        <sys_updated_on>2022-01-31 13:08:50</sys_updated_on>
+        <table>incident</table>
+        <type>onLoad</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Ricoh Service Advantage Portal -  Global">a94219c5db10091091a5560868961952</application>
+        <file_path/>
+        <instance_id>d22192526f90e244869e7b2f5d3ee476</instance_id>
+        <instance_name>ricohusadev</instance_name>
+        <name>sys_script_client_0b38d14bdb95011091a556086896198a</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="8eba0beedb423200ddad70e21f9619df" table="sys_script_client"&gt;&lt;sys_script_client action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;applies_extended&gt;false&lt;/applies_extended&gt;&lt;condition/&gt;&lt;description/&gt;&lt;field&gt;u_action_code&lt;/field&gt;&lt;global&gt;true&lt;/global&gt;&lt;isolate_script&gt;true&lt;/isolate_script&gt;&lt;messages/&gt;&lt;name&gt;AutopopulateKnowledgeBase&lt;/name&gt;&lt;order/&gt;&lt;script&gt;&lt;![CDATA[function onLoad() {
+	try{
+	var ga = new GlideAjax("MSTClientUtilsAjax");
+	ga.addParam("sysparm_name", "getKBFromAssignmentGroup");
+	ga.addParam("sysparm_assignment_group_id", g_form.getValue("assignment_group"));
+	ga.addParam("sysparm_view", gel("sysparm_view").value);
+	ga.getXML(setKbValue);
+	}
+	catch(e)
+		{
+			console.log('Err:gel is not defined' );
+		}
+	
+	// Below is the old code prior to STRY0082559
+	//Get the view name
+// 	var view_name = gel("sysparm_view").value;
+	
+// 	var gr = new GlideRecord('kb_knowledge_base');
+	
+// 	if( view_name == 'Solutions') {
+// 		gr.addQuery("title", 'TSSC Solutions');
+// 		gr.query(setKb);
+// 	} else if (view_name == "Serial_EID") {
+// 		gr.addQuery("title", 'TSSC Knowledge');
+// 		gr.query(setKb);
+// 	} else { //else //if (view_name == "" || view_name == "Default View") {
+// 		gr.addQuery("title", 'Knowledge');
+// 		gr.query(setKb);
+// 	}
+	
+}
+
+function setKbValue(response) {
+	var answer = response.responseXML.documentElement.getAttribute("answer");
+	console.log("KBID ANSWER: " + answer);
+	g_form.setValue("u_kb_knowledge_base", answer); 
+}
+
+// function setKb(kbGr) {
+// 	if (kbGr.next())
+// 		g_form.setValue('u_kb_knowledge_base', kbGr.sys_id);
+// }
+
+// function getUrlParameter(name){
+// 	var url = document.URL.parseQuery();
+// 	if (url[name]) {
+// 		return decodeURI(url[name]);
+// 	} else {
+// 		return;
+// 	}
+// }]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_client&lt;/sys_class_name&gt;&lt;sys_created_by&gt;Mohammad.Ahmed@mindshift.com&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-01-31 13:08:50&lt;/sys_created_on&gt;&lt;sys_customer_update&gt;true&lt;/sys_customer_update&gt;&lt;sys_domain&gt;8eba0beedb423200ddad70e21f9619df&lt;/sys_domain&gt;&lt;sys_domain_path&gt;!!!/&lt;/sys_domain_path&gt;&lt;sys_id&gt;0b38d14bdb95011091a556086896198a&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;AutopopulateKnowledgeBase&lt;/sys_name&gt;&lt;sys_overrides display_value=""&gt;da1eaf31dbf347005524fbec0f9619c0&lt;/sys_overrides&gt;&lt;sys_package display_value="Ricoh Service Advantage Portal -  Global" source="a94219c5db10091091a5560868961952"&gt;a94219c5db10091091a5560868961952&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_replace_on_upgrade&gt;false&lt;/sys_replace_on_upgrade&gt;&lt;sys_scope display_value="Ricoh Service Advantage Portal -  Global"&gt;a94219c5db10091091a5560868961952&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_client_0b38d14bdb95011091a556086896198a&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;Mohammad.Ahmed@mindshift.com&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-01-31 13:08:50&lt;/sys_updated_on&gt;&lt;table&gt;incident&lt;/table&gt;&lt;type&gt;onLoad&lt;/type&gt;&lt;ui_type&gt;0&lt;/ui_type&gt;&lt;view/&gt;&lt;/sys_script_client&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-1151735278</payload_hash>
+        <record_name>AutopopulateKnowledgeBase</record_name>
+        <reverted_from/>
+        <source>4d852201db950110c05f2706ca9619df</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>Mohammad.Ahmed@mindshift.com</sys_created_by>
+        <sys_created_on>2022-01-31 13:08:51</sys_created_on>
+        <sys_id>d338d14bdb95011091a5560868961990</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17eb0409ac20000001</sys_recorded_at>
+        <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
+        <sys_updated_on>2022-01-31 13:08:51</sys_updated_on>
+        <type>Client Script</type>
+        <update_guid>5b38d14bcb9501107770187639e93b8f</update_guid>
+        <update_guid_history>5b38d14bcb9501107770187639e93b8f:-1151735278</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>Mohammad.Ahmed@mindshift.com</sys_created_by>
+        <sys_created_on>2022-01-31 13:12:27</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_db_object display_value="" name="sys_script_client">sys_script_client</sys_db_object>
+        <sys_id>04fb8627ab23490081de895428030400</sys_id>
+        <sys_metadata>0b38d14bdb95011091a556086896198a</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>AutopopulateKnowledgeBase</sys_name>
+        <sys_package display_value="Ricoh Service Advantage Portal -  Global" source="a94219c5db10091091a5560868961952">a94219c5db10091091a5560868961952</sys_package>
+        <sys_parent display_value="Incident">038faef0db2132004efafbec0f961923</sys_parent>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Ricoh Service Advantage Portal -  Global">a94219c5db10091091a5560868961952</sys_scope>
+        <sys_scope_delete display_value="">38ce1a1362b24dbea4b1a222dee62029</sys_scope_delete>
+        <sys_update_name>sys_script_client_0b38d14bdb95011091a556086896198a</sys_update_name>
+        <sys_update_version display_value="sys_script_client_0b38d14bdb95011091a556086896198a">d338d14bdb95011091a5560868961990</sys_update_version>
+        <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
+        <sys_updated_on>2022-01-31 13:12:27</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

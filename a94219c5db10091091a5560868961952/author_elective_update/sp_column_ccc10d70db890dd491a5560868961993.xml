@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_column">
+    <sp_column action="DELETE">
+        <class_name>flex-item</class_name>
+        <order>2</order>
+        <size>12</size>
+        <size_lg/>
+        <size_sm/>
+        <size_xs/>
+        <sp_row display_value="1">7bb10d70db890dd491a5560868961989</sp_row>
+        <sys_class_name>sp_column</sys_class_name>
+        <sys_created_by>Mohammad.Ahmed@mindshift.com</sys_created_by>
+        <sys_created_on>2022-01-12 01:28:33</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>ccc10d70db890dd491a5560868961993</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>2</sys_name>
+        <sys_package display_value="Ricoh Service Advantage Portal -  Global" source="a94219c5db10091091a5560868961952">a94219c5db10091091a5560868961952</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Ricoh Service Advantage Portal -  Global">a94219c5db10091091a5560868961952</sys_scope>
+        <sys_update_name>sp_column_ccc10d70db890dd491a5560868961993</sys_update_name>
+        <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
+        <sys_updated_on>2022-01-12 01:28:33</sys_updated_on>
+    </sp_column>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Ricoh Service Advantage Portal -  Global">a94219c5db10091091a5560868961952</application>
+        <file_path/>
+        <instance_id>d22192526f90e244869e7b2f5d3ee476</instance_id>
+        <instance_name>ricohusadev</instance_name>
+        <name>sp_column_ccc10d70db890dd491a5560868961993</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_column">
+    <sp_column action="INSERT_OR_UPDATE">
+        <class_name>flex-item</class_name>
+        <order>2</order>
+        <size>12</size>
+        <size_lg/>
+        <size_sm/>
+        <size_xs/>
+        <sp_row display_value="1">7bb10d70db890dd491a5560868961989</sp_row>
+        <sys_class_name>sp_column</sys_class_name>
+        <sys_created_by>Mohammad.Ahmed@mindshift.com</sys_created_by>
+        <sys_created_on>2022-01-12 01:28:33</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>ccc10d70db890dd491a5560868961993</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>2</sys_name>
+        <sys_package display_value="Ricoh Service Advantage Portal -  Global" source="a94219c5db10091091a5560868961952">a94219c5db10091091a5560868961952</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Ricoh Service Advantage Portal -  Global">a94219c5db10091091a5560868961952</sys_scope>
+        <sys_update_name>sp_column_ccc10d70db890dd491a5560868961993</sys_update_name>
+        <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
+        <sys_updated_on>2022-01-12 01:28:33</sys_updated_on>
+    </sp_column>
+</record_update>]]></payload>
+        <payload_hash>1591206520</payload_hash>
+        <record_name>2</record_name>
+        <reverted_from/>
+        <source>4fe60745db11411091a55608689619d2</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>Mohammad.Ahmed@mindshift.com</sys_created_by>
+        <sys_created_on>2022-01-25 16:04:36</sys_created_on>
+        <sys_id>13e6c745db11411091a5560868961914</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17e91fb5b320000001</sys_recorded_at>
+        <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
+        <sys_updated_on>2022-01-25 16:04:36</sys_updated_on>
+        <type>Column</type>
+        <update_guid>dfe6c7451111411024c432c21e69b513</update_guid>
+        <update_guid_history>dfe6c7451111411024c432c21e69b513:1591206520</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Record deleted 2022-01-28 04:55:12">e92fc9c2db9d015091a556086896194e</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>Mohammad.Ahmed@mindshift.com</sys_created_by>
+        <sys_created_on>2022-01-28 09:55:12</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_db_object display_value="" name="sp_column">sp_column</sys_db_object>
+        <sys_id>0db21478f9fa44c88116865b671fd7a9</sys_id>
+        <sys_metadata>ccc10d70db890dd491a5560868961993</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>2</sys_name>
+        <sys_package display_value="Ricoh Service Advantage Portal -  Global" source="a94219c5db10091091a5560868961952">a94219c5db10091091a5560868961952</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Ricoh Service Advantage Portal -  Global">a94219c5db10091091a5560868961952</sys_scope>
+        <sys_scope_delete display_value="">38ce1a1362b24dbea4b1a222dee62029</sys_scope_delete>
+        <sys_update_name>sp_column_ccc10d70db890dd491a5560868961993</sys_update_name>
+        <sys_update_version display_value="sp_column_ccc10d70db890dd491a5560868961993">13e6c745db11411091a5560868961914</sys_update_version>
+        <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
+        <sys_updated_on>2022-01-28 09:55:12</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
