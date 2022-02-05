@@ -29,15 +29,15 @@
         <sys_created_by>Mohammad.Ahmed@mindshift.com</sys_created_by>
         <sys_created_on>2021-12-06 14:32:09</sys_created_on>
         <sys_id>a94219c5db10091091a5560868961952</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_updated_by>Mohammad.Ahmed@mindshift.com</sys_updated_by>
-        <sys_updated_on>2022-01-05 10:46:06</sys_updated_on>
+        <sys_updated_on>2022-02-05 09:15:53</sys_updated_on>
         <template/>
         <trackable>true</trackable>
         <uninstall_blocked>false</uninstall_blocked>
         <user_role/>
         <vendor/>
         <vendor_prefix/>
-        <version>1.0.0</version>
+        <version>1.0.2</version>
     </sys_app>
 </record_update>
